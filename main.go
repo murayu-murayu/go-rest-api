@@ -6,7 +6,6 @@ import (
 	"log"
 	"net"
 	"os"
-	"os/signal"
 
 	"github.com/murayu-murayu/go-rest-api/config"
 )
