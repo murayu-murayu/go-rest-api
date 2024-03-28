@@ -12,9 +12,6 @@ import (
 	"github.com/murayu-murayu/go-rest-api/testutil"
 )
 
-
-
-
 func TestRepository_ListTasks(t *testing.T) {
 	ctx := context.Background()
 	// entity.Taskを作成する他のテストケースと混ざるとテストがフェイルする。
@@ -36,11 +33,6 @@ func TestRepository_ListTasks(t *testing.T) {
 		t.Errorf("differs: (-got +want)\n%s", d)
 	}
 }
-
-
-
-
-
 
 func prepareTasks(ctx context.Context, t *testing.T, con Execer) entity.Tasks {
 	t.Helper()
@@ -85,8 +77,6 @@ func prepareTasks(ctx context.Context, t *testing.T, con Execer) entity.Tasks {
 	wants[2].ID = entity.TaskID(id + 2)
 	return wants
 }
-
-
 
 func TestRepository_AddTask(t *testing.T) {
 	t.Parallel()
